@@ -1,0 +1,66 @@
+const inputs = document.querySelectorAll('.controls input');
+
+function handleUpdate() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+}
+
+inputs.forEach(inputs => inputs.addEventListener('change', handleUpdate));
+inputs.forEach(inputs => inputs.addEventListener('mousemove', handleUpdate));
+
+
+
+/*
+body{
+    background: black;
+    text-align: center;
+    color: white;
+    font-family: 'helvetica neue', sans-serif;
+    font-size: 50px;
+}
+
+:root{
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+.controls{
+    margin-bottom: 50px;
+}
+
+a{
+    color: var(--base);
+    text-decoration: none;
+}
+
+input{
+    width: 300px;
+    height: 100px;
+    padding:  10px;
+    gap: 50px;
+
+}
+
+img{
+    margin-top: 100px;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    width: 40%;
+    
+}
+
+.h1{
+    color: var(--base);
+    font-size: 150px;
+}
+
+label{
+    font-size: 180px;
+}
+
+h2{
+    font-size: 100px;
+}
+*/
